@@ -10,25 +10,13 @@ Dictate text anywhere on your Mac using local AI (no cloud, no API keys).
 ## Installation
 
 ```bash
-# Clone or cd into the speak directory
-cd speak
-
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
+pip install git+https://github.com/puneetkumarbajaj/speak
 ```
 
 ## Usage
 
 ```bash
-# Activate venv if not already
-source venv/bin/activate
-
-# Run the daemon
-python speak.py
+speak
 ```
 
 First run will download the Whisper model (~800MB).
