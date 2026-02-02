@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "speak-dictation"
+version = "0.1.0"
+description = "Voice to text for macOS using local MLX Whisper - no cloud, no API keys"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+keywords = ["voice", "dictation", "speech-to-text", "whisper", "mlx", "macos"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: MacOS X",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = [
+    "mlx-whisper>=0.4.0",
+    "sounddevice>=0.4.6",
+    "numpy>=1.24.0",
+    "pynput>=1.7.6",
+    "pyobjc-core>=10.0",
+    "pyobjc-framework-Quartz>=10.0",
+    "pyobjc-framework-Cocoa>=10.0",
+]
+
+[project.scripts]
+speak = "speak:main"
+
+[project.urls]
+Homepage = "https://github.com/puneetkumarbajaj/speak"
+Repository = "https://github.com/puneetkumarbajaj/speak"
+
+[tool.setuptools]
+py-modules = ["speak"]
